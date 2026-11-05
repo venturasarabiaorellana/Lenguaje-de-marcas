@@ -1,36 +1,149 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería</title>
-  <link type="text/css" href="estilo.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | LOS CICLOPES</title>
+
+    <!-- Bootstrap 5: hoja de estilos que da diseño a la web -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Fondo morado degradado de toda la página */
+        body {
+            background: radial-gradient(circle at top, #3b0a4f 0%, #1a0628 55%, #000000 100%);
+            color: #ffb347;
+            min-height: 100vh;
+        }
+
+        /* Colores propios que sustituyen a los de Bootstrap */
+        .navbar.bg-info {
+            background-color: #ff6a00 !important;
+        }
+
+        .bg-dark {
+            background-color: #0d0014 !important;
+        }
+
+        .bg-secondary {
+            background-color: #2a0b3d !important;
+        }
+
+        .border-danger {
+            border-color: #ff6a00 !important;
+        }
+
+        .text-danger {
+            color: #ff6a00 !important;
+        }
+
+        .text-warning {
+            color: #ffd23f !important;
+        }
+
+        .text-info {
+            color: #9dff2e !important;
+        }
+
+        .text-light {
+            color: #f3e5ff !important;
+        }
+
+        .text-white {
+            color: #ffffff !important;
+        }
+
+        /* Colores de la tabla oscura */
+        .table-dark {
+            --bs-table-bg: #1a0526;
+            --bs-table-striped-bg: #2a0b3d;
+            --bs-table-color: #f3e5ff;
+            --bs-table-border-color: #ff6a00;
+        }
+    </style>
 </head>
 <body>
 
-<ul>
-  <li><a href="menu.html">Inicio</a></li>
-  <li><a href="galeria.html">Galería</a></li>
-  <li><a href="formulario.html">Formulario</a></li>
-</ul>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+    <div class="container">
+        <!-- Nombre de la web en la barra (aquí pone "Mi Web") -->
+        <a class="navbar-brand" href="index.html">Mi Web</a>
 
-<div class="contenido">
-  <h1>Galería de Uncharted 3</h1>
+        <!-- Botón hamburguesa: abre el menú en móviles -->
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <h2>Personajes</h2>
-  <div class="fila">
-    <img src="drake.jpg" alt="Nathan Drake">
-    <img src="sully.jpg" alt="Victor Sullivan">
-    <img src="elena.jpg" alt="Elena Fisher">
-  </div>
+            <!-- Menú de enlaces -->
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Conoce a los ciclopes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="galeria.html">Evidencias Fotográficas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Informar sobre un avistamiento</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <h2>Escenarios</h2>
-  <div class="fila">
-    <img src="desierto.jpg" alt="El desierto de Rub' al Khali">
-    <img src="barco.jpg" alt="El barco">
-    <img src="castillo.jpg" alt="El castillo">
-  </div>
+    <!-- CONTENIDO PRINCIPAL: caja oscura con el título y las fotos -->
+<div class="container mt-4 text-light bg-dark p-4 rounded">
+    <h1 class="text-danger">👁️ Galería de Avistamientos</h1>
+    <p class="lead text-warning">Evidencias fotográficas y reliquias recuperadas de las tierras de los gigantes, Esto es lo que hemos encontrado, gracias a la colaboración de nuestros investigadores y seguidores de nuestra web.</p>
+
+    <!-- row: fila de fotos. Cada fila tiene 3 columnas -->
+    <div class="row mt-4">
+        <!-- col-md-4: cada foto ocupa 1/3 del ancho en pantallas medianas o grandes -->
+        <div class="col-md-4 mb-4 text-center">
+            <!-- img-fluid: la imagen se adapta al ancho. rounded, border, shadow: esquinas, borde y sombra -->
+            <img src="image_38e38708.jpg" class="img-fluid rounded border border-danger shadow" alt="El ojo en la oscuridad">
+            <p class="mt-2 text-info">La mirada en la penumbra</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+            <img src="image_e3cb135c.jpg" class="img-fluid rounded border border-danger shadow" alt="La forja ardiente">
+            <p class="mt-2 text-info">Las entrañas de la forja</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+            <img src="image_58503baa.jpg" class="img-fluid rounded border border-danger shadow" alt="La cueva del gigante">
+            <p class="mt-2 text-info">La guarida de Polifemo</p>
+        </div>
+    </div>
+
+    <!-- Segunda fila de fotos -->
+    <div class="row">
+        <div class="col-md-4 mb-4 text-center">
+            <img src="image_fb308e5.jpg" class="img-fluid rounded border border-danger shadow" alt="Relámpago divino">
+            <p class="mt-2 text-info">El primer rayo forjado</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+            <img src="image_c98e272f.jpg" class="img-fluid rounded border border-danger shadow" alt="Rebaño en la niebla">
+            <p class="mt-2 text-info">El ganado de la isla maldita</p>
+        </div>
+        <div class="col-md-4 mb-4 text-center">
+            <img src="image_53292cb5.jpg" class="img-fluid rounded border border-danger shadow" alt="Herramientas colosales">
+            <p class="mt-2 text-info">El martillo del Etna</p>
+        </div>
+    </div>
 </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2026 LOS CICLOPES</p>
+    </footer>
+
+    <!-- JavaScript de Bootstrap: necesario para el menú hamburguesa -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
